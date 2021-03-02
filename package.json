@@ -1,0 +1,29 @@
+{
+  "name": "backend-sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alvaro-78/backend-sql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alvaro-78/backend-sql/issues"
+  },
+  "homepage": "https://github.com/Alvaro-78/backend-sql#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
