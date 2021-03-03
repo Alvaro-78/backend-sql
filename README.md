@@ -16,11 +16,16 @@
     - Access to Trello Dashboard Documentation
 [Trello](#https://trello.com/b/neMBMHy8/project-sql)
 
+## Models
+	- Customer
+	- Dentist
+	- Dates
+
 ## Postman
 
 ## Explicacion de la Falla
 
-Hola que ase
+
 ## I'm a Commit
 
 
