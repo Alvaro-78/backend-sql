@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       this.hasOne( models.Date,{
-        foreignKey: customerID
+        foreignKey: "customerID"
       });
     }
   };

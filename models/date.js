@@ -6,13 +6,20 @@ module.exports = (sequelize, DataTypes) => {
   class Date extends Model {
    
     static associate(models) {
-      this.belongsTo( models.customerID )
-      this.belongsTo( models.dentistID )
-    }
+      this.belongsTo(models.Customer, {
+        foreignKey: 'customerID'
+
+      });
+      this.belongsTo(models.Dentist, {
+        foreignKey: 'dentistID'
+        
+
+      });
+
+    };
+
   };
   Date.init({
-    dentistID: DataTypes.INTEGER,
-    customerID: DataTypes.INTEGER,
     dentalAppointment: DataTypes.STRING
   }, {
     sequelize,
