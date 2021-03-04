@@ -1,5 +1,9 @@
 # Project Backend-SQL
 
+![JavaScript](./assets/icons/js.png)
+![CSS3](./assets/icons/css3.png)
+![HTML5](./assets/icons/html5.png)
+
 ## Autors:
     - Alvaro
     - Robert
@@ -33,4 +37,5 @@ Link Repo: https://github.com/Alvaro-78/backend-sql/tree/master
 We have worked on two different branches called master and dev.
 
 
-
+ 
+ 
