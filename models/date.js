@@ -12,13 +12,10 @@ module.exports = (sequelize, DataTypes) => {
       });
       this.belongsTo(models.Dentist, {
         foreignKey: 'dentistID'
-        
-
       });
-
     };
-
   };
+
   Date.init({
     dentalAppointment: DataTypes.STRING
   }, {
