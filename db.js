@@ -1,6 +1,6 @@
 const config = require('./config/config.json');
 
-const {Sequelize, DataTypes} = require('sequelize');
+const {Sequelize} = require('sequelize');
 const sequelize = new Sequelize(
     process.env.MYSQL_DATABASE || config.development.database,
     process.env.MYSQL_USER || config.development.username,

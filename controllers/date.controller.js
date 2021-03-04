@@ -10,6 +10,18 @@ class DateController {
     return Date.findOne({where:{id}});
   };
 
+  async findById(id) {
+    return Date.findOne({where:{id}});
+  };
+
+  async findByCustomerId(customerID) {
+    return Date.find({where:{customerID}});
+  };
+
+  async findByDentistId(dentistID) {
+    return Date.find({where:{dentistID}});
+  };
+
 };
 
 

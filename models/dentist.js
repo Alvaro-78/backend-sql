@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Dentist extends Model {
    
     static associate(models) {
-      this.hasOne( models.Date,{
+      this.hasMany( models.Date,{
         foreignKey: "dentistID"
       });
     }
