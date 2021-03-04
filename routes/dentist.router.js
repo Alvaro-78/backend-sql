@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const customerRouter = require('./customer.router');
 const dateRouter = require('./date.router');
 
 // const dentistController = require("#");
@@ -7,6 +6,7 @@ const dateRouter = require('./date.router');
 // RESOURCES
 
 router.use('/id:date', dateRouter);
+
 
 // ENDPOINTS
 
@@ -37,3 +37,5 @@ router.get('/:id', async (req,res) => {
         });
     };
 });
+
+module.exports = router;
