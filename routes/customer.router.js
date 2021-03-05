@@ -40,9 +40,11 @@ router.get('/:id', async (req,res) => {
   };
 });
 
-router.post('/:id/appointments', async (req,res) => {
+// CREATE CUSTOMER
+
+router.post('/customers', async (req,res) => {
   try{
-    res.json(await appointmentController.findById(req.params.id));
+    res.json(await customerController.createCustomer(req.body));
   }catch(error){
     console.log(error);
     res.status(500).json({
@@ -51,5 +53,35 @@ router.post('/:id/appointments', async (req,res) => {
     });
   };
 });
+
+// UPDATE CUSTOMER
+
+router.put('/:id', async (req,res) => {
+  try{
+    res.json(await customerController.updateCustomer(req.params.id));
+  }catch(error){
+    console.log(error);
+    res.status(500).json({
+      error: 'error',
+      message: 'error'
+    });
+  };
+});
+
+// DELETE CUSTOMER
+
+router.put('/:id', async (req,res) => {
+  try{
+    res.json(await customerController.deleteCustomer(req.params.id));
+  }catch(error){
+    console.log(error);
+    res.status(500).json({
+      error: 'error',
+      message: 'error'
+    });
+  };
+});
+
+
 
 module.exports = router;
