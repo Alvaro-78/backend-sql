@@ -1,6 +1,4 @@
 const router = require('express').Router({mergeParams:true});
-
-
 const appointmentController = require("../controllers/appointment.controller");
 
 // RESOURCES
@@ -28,18 +26,16 @@ router.get ('/', async (req,res) => {
   };
 });
 
+// GET APPOINTMENT
+
 // CREATE APPOINTMENT
 
 router.post ('/', async (req,res) => {
   try{
-    let payload = req.body;
-    if(req.params.customerId) {
-      payload.customerId = req.params.customerId
-    }else if(req.params.dentistId){
-      payload.dentistId = req.params.dentistId
-    }
-      res.json(await appointmentController.create(payload));
-   
+    console.log(req.body)
+    const client = req.params.customerId;
+    const doctor = req.params.dentistId
+    res.json(await appointmentController.createAppointment(req.body, client, doctor));
   }catch(error){
     console.log(error);
     res.status(500).json({
@@ -53,7 +49,7 @@ router.post ('/', async (req,res) => {
 
 router.get('/:id', async (req,res) => {
     try{
-        res.json(await appointmentController.findById(req.params.id));
+        res.json(await appointmentController.findAppointment(req.params.id));
     }catch(error){
         console.log(error);
         res.status(500).json({
@@ -88,7 +84,7 @@ router.put ('/:id', async (req,res) => {
 
 router.delete('/:id', async (req,res) => {
   try{
-      res.json(await appointmentController.deleteById(req.params.id));
+      res.json(await appointmentController.deleteAppointment(req.params.id));
   }catch(error){
       console.log(error);
       res.status(500).json({

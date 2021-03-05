@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('express').Router({mergeParams:true});
 const appointmentRouter = require('./appointment.router');
 
 
@@ -30,7 +30,7 @@ router.get ('/', async (req,res) => {
 
 router.get('/:id', async (req,res) => {
   try{
-    res.json(await customerController.findById(req.params.id));
+    res.json(await customerController.findCustomer(req.params.id));
   }catch(error){
     console.log(error);
     res.status(500).json({
@@ -42,7 +42,7 @@ router.get('/:id', async (req,res) => {
 
 // CREATE CUSTOMER
 
-router.post('/customers', async (req,res) => {
+router.post('/', async (req,res) => {
   try{
     res.json(await customerController.createCustomer(req.body));
   }catch(error){
@@ -58,7 +58,8 @@ router.post('/customers', async (req,res) => {
 
 router.put('/:id', async (req,res) => {
   try{
-    res.json(await customerController.updateCustomer(req.params.id));
+    const body = req.body;
+    res.json(await customerController.updateCustomer(body, req.params.id));
   }catch(error){
     console.log(error);
     res.status(500).json({
@@ -70,7 +71,7 @@ router.put('/:id', async (req,res) => {
 
 // DELETE CUSTOMER
 
-router.put('/:id', async (req,res) => {
+router.delete('/:id', async (req,res) => {
   try{
     res.json(await customerController.deleteCustomer(req.params.id));
   }catch(error){

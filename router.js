@@ -5,9 +5,9 @@ const dentistRouter = require('./routes/dentist.router');
 
 // REST RESOURCES
 
-router.use('/customer',customerRouter);
-router.use('/appointment', appointmentRouter);
-router.use('/dentist', dentistRouter);
+router.use('/customers',customerRouter);
+router.use('/appointments', appointmentRouter);
+router.use('/dentists', dentistRouter);
 
 
 module.exports = router;

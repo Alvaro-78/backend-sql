@@ -9,7 +9,7 @@ class CustomerController {
   };
 
   // Find by CustomerId
-  async findById(id) {
+  async findCustomer(id) {
     return Customer.findOne({where:{id}});
   };
 
@@ -19,13 +19,13 @@ class CustomerController {
   };
 
   // Update Customer
-  async updateCustomer(id) {
-    return Customer.updateById({where:{id}})
+  async updateCustomer(customer, id) {
+    return Customer.update(customer,{where:{id}})
   };
 
   // Delete Customer
   async deleteCustomer(id) {
-    return Customer.deleteCustomer({where:{id}})
+    return Customer.destroy({where:{id}})
   };
 };
 

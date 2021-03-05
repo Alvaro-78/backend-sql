@@ -8,8 +8,8 @@ class DentistController {
   };
 
   // FIND DENTIST BY ID
-  async findById(id) {
-    return Dentist.findOne({where:{id}});
+  async findDentist(id) {
+    return Dentist.findById({where:{id}});
   };
 
   // CREATE DENTIST
@@ -18,13 +18,13 @@ class DentistController {
   };
 
   // UPDATE DENTIST
-  async updateDentist(id) {
-    return Dentist.updateById({where:{id}})
+  async updateDentist(dentist,id) {
+    return Dentist.update(dentist,{where:{id}})
   };
 
   // DELETE DENTIST
   async deleteDentist(id){
-    return Dentist.deleteById({where:{id}})
+    return Dentist.destroy({where:{id}})
   };
 
 };

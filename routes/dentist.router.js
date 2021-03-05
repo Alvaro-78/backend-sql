@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('express').Router({mergeParams:true});
 const appointmentRouter = require('./appointment.router');
 
 const dentistController = require("../controllers/dentist.controller");
@@ -27,7 +27,7 @@ router.get ('/', async (req,res) => {
 
 router.get('/:id', async (req,res) => {
     try{
-        res.json(await dentistController.findById(req.params.id));
+        res.json(await dentistController.findDentist(req.params.id));
     }catch(error){
         console.log(error);
         res.status(500).json({
@@ -39,7 +39,7 @@ router.get('/:id', async (req,res) => {
 
 // CREATE DENTIST
 
-router.post('/dentists', async (req,res) => {
+router.post('/', async (req,res) => {
     try{
       res.json(await dentistController.createDentist(req.body));
     }catch(error){
@@ -55,7 +55,8 @@ router.post('/dentists', async (req,res) => {
 
 router.put('/dentists', async (req,res) => {
     try{
-      res.json(await dentistController.updateDentist(req.body));
+      const body = req.body;
+      res.json(await dentistController.updateDentist(req.body, body));
     }catch(error){
       console.log(error);
       res.status(500).json({

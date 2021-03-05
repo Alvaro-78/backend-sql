@@ -7,19 +7,23 @@ class AppointmentController {
     return Appointment.findAll();
   };
 
+  async createAppointment(customerId, dentistId, id) {
+    return Appointment.create(customerId,dentistId,{where:{id}});  
+  }
+
   // Find All Appointments by AppointmentId
-  async findById(id) {
-    return Appointment.findOne({where:{id}});
+  async findAppointment(id) {
+    return Appointment.findById({where:{id}});
   };
 
   // Find One Appointment by CustomerId
   async findByCustomerId(customerId) {
-    return Appointment.find({where:{customerId}});
+    return Appointment.findById({where:{customerId}});
   };
 
   // Find One Appointment by DentistId
   async findByDentistId(dentistId) {
-    return Appointment.find({where:{dentistId}});
+    return Appointment.findById({where:{dentistId}});
   };
 
   // Update One Appointment by CustomerId
@@ -33,13 +37,13 @@ class AppointmentController {
   };
 
   // Update One Appointment by Id
-  async updateAppointment(id) {
-    return Appointment.update({where:{id}})
+  async updateAppointment(customerId,dentistId,id) {
+    return Appointment.update(customerId,dentistId,{where:{id}})
   }
 
   // Delete One Appointment by AppointmentId
-  async deleteById(id) {
-    return Appointment.deleteById({where:{id}})
+  async deleteAppointment(id) {
+    return Appointment.destroy({where:{id}})
   }
 };
 
