@@ -9,6 +9,7 @@ const appointmentController = require("../controllers/appointment.controller");
 // ENDPOINTS
 
 // GET ALL
+
 router.get ('/', async (req,res) => {
   try{
     if(req.params.customerId) {
@@ -26,6 +27,8 @@ router.get ('/', async (req,res) => {
     });
   };
 });
+
+// CREATE APPOINTMENT
 
 router.post ('/', async (req,res) => {
   try{
@@ -46,9 +49,8 @@ router.post ('/', async (req,res) => {
   };
 });
 
-
-
 // GET BY ID
+
 router.get('/:id', async (req,res) => {
     try{
         res.json(await appointmentController.findById(req.params.id));
@@ -60,6 +62,42 @@ router.get('/:id', async (req,res) => {
         });
     };
 });
+
+// UPDATE ID
+
+router.put ('/:id', async (req,res) => {
+  try{
+    const body = req.body;
+    if(req.params.customerId) {
+      res.json(await appointmentController.updateCustomerId(req.params.customerId,body))
+    }else if(req.params.dentistId){
+      res.json(await appointmentController.updateDentistId(req.params.dentistId,body))
+    }else{
+      res.json(await appointmentController.updateAppointment(body));
+    };
+  }catch(error){
+    console.log(error);
+    res.status(500).json({
+      error: 'error',
+      message: 'error'
+    });
+  };
+});
+
+// DELETE APPOINTMENT by ID
+
+router.delete('/:id', async (req,res) => {
+  try{
+      res.json(await appointmentController.deleteById(req.params.id));
+  }catch(error){
+      console.log(error);
+      res.status(500).json({
+          error: 'error',
+          message: 'error'
+      });
+  };
+});
+
 
 
 module.exports = router;
