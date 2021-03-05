@@ -1,8 +1,7 @@
 # Project Backend-SQL
 
-![JavaScript](./assets/icons/js.png)
-![CSS3](./assets/icons/css3.png)
-![HTML5](./assets/icons/html5.png)
+![JavaScript](./icons/js.png)
+![MySQL](./icons/mysql.png)
 
 ## Autors:
     - Alvaro
