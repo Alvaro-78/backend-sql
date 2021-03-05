@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const dateRouter = require('./date.router');
+const appointmentRouter = require('./appointment.router');
 
 const dentistController = require("../controllers/dentist.controller");
 
 // RESOURCES
 
-router.use('/:dentistId/dates', dateRouter);
+router.use('/:dentistId/appointments', appointmentRouter);
 
 // ENDPOINTS
 

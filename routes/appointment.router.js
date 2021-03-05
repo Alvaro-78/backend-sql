@@ -1,7 +1,7 @@
 const router = require('express').Router({mergeParams:true});
 
 
-const dateController = require("../controllers/date.controller");
+const appointmentController = require("../controllers/appointment.controller");
 
 // RESOURCES
 
@@ -12,11 +12,11 @@ const dateController = require("../controllers/date.controller");
 router.get ('/', async (req,res) => {
   try{
     if(req.params.customerId) {
-      res.json(await dateController.findByCustomerId(req.params.customerId))
+      res.json(await appointmentController.findByCustomerId(req.params.customerId))
     }else if(req.params.dentistId){
-      res.json(await dateController.findByDentistId(req.params.dentistId))
+      res.json(await appointmentController.findByDentistId(req.params.dentistId))
     }else{
-      res.json(await dateController.indexAll());
+      res.json(await appointmentController.indexAll());
     };
   }catch(error){
     console.log(error);
@@ -31,11 +31,11 @@ router.post ('/', async (req,res) => {
   try{
     let payload = req.body;
     if(req.params.customerId) {
-      payload.customerID = req.params.customerId
+      payload.customerId = req.params.customerId
     }else if(req.params.dentistId){
-      payload.dentistID = req.params.dentistId
+      payload.dentistId = req.params.dentistId
     }
-      res.json(await dateController.create(payload));
+      res.json(await appointmentController.create(payload));
    
   }catch(error){
     console.log(error);
@@ -51,7 +51,7 @@ router.post ('/', async (req,res) => {
 // GET BY ID
 router.get('/:id', async (req,res) => {
     try{
-        res.json(await dateController.findById(req.params.id));
+        res.json(await appointmentController.findById(req.params.id));
     }catch(error){
         console.log(error);
         res.status(500).json({

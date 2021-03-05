@@ -4,8 +4,8 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
 
   return [queryInterface.addColumn(
-    'Dates', // name of Source model
-    'customerID', // name of the key we're adding 
+    'Appointments', // name of Source model
+    'customerId', // name of the key we're adding 
     {
         type: Sequelize.INTEGER,
         references: {
@@ -16,8 +16,8 @@ module.exports = {
         onDelete: 'SET NULL'
       }),
       queryInterface.addColumn(
-        'Dates', // name of Source model
-        'dentistID', // name of the key we're adding 
+        'Appointments', // name of Source model
+        'dentistId', // name of the key we're adding 
         {
             type: Sequelize.INTEGER,
             references: {
