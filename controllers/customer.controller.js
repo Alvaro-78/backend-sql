@@ -1,4 +1,7 @@
 const {Customer} = require('../models');
+const bcrypt = require( 'bcryptjs' );
+const jwt = require( 'jsonwebtoken' );
+const secretWord = process.env.JWT_SECRET || 'sacamuelas'
 
 
 class CustomerController {
@@ -15,8 +18,31 @@ class CustomerController {
 
   // Create Customer
   async createCustomer(customer) {
+    Customer.password = await bcrypt.hash(customer.password, 5)
     return Customer.create(customer)
   };
+
+  // CREATE LOGIN
+
+  async login( email,password ) {
+
+    const user =  await Customer.findOne( { email } );
+
+    if(!user){
+      throw new Error( 'The email does not exist' )
+    };
+
+    if(!await bcrypt.compare( password, customer.password )) {
+      throw new Error( 'Wrong password' )
+    };
+
+    const payload = {
+
+      customerId: customer.id,
+      tokenCreationDate: new Date,
+    };
+    return jwt.sign(payload, secretWord);
+  };   
 
   // Update Customer
   async updateCustomer(customer, id) {
