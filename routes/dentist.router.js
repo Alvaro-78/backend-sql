@@ -53,10 +53,10 @@ router.post('/', async (req,res) => {
 
 // UPDATE DENTIST
 
-router.put('/dentists', async (req,res) => {
+router.put('/:id', async (req,res) => {
     try{
       const body = req.body;
-      res.json(await dentistController.updateDentist(req.body, body));
+      res.json(await dentistController.updateDentist(body, req.params.id));
     }catch(error){
       console.log(error);
       res.status(500).json({
@@ -68,9 +68,9 @@ router.put('/dentists', async (req,res) => {
 
 // DELATE DENTIST
 
-router.delete('/dentists', async (req,res) => {
+router.delete('/:id', async (req,res) => {
   try{
-    res.json(await dentistController.deleteDentist(req.body));
+    res.json(await dentistController.deleteDentist(req.params.id));
   }catch(error){
     console.log(error);
     res.status(500).json({

@@ -11,6 +11,15 @@ module.exports = {
       address: "C/ sin nombre 33",
       createdAt: new Date,
       updatedAt: new Date
+    },
+    {
+      firstName: "Chico",
+      lastName:  "Terremoto",
+      email: "chicho@terremoto.com",
+      phoneNumber: "+34 521789543",
+      address: "C/para pelotas las mias",
+      createdAt: new Date,
+      updatedAt: new Date
     }
   ], {});
  

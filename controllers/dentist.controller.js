@@ -3,13 +3,13 @@ const {Dentist} = require('../models');
 class DentistController {
 
   // FIND ALL DENTISTS
-  async indexAll() {
-    return Dentist.findAll();
+  async indexAll(dentist) {
+    return Dentist.findAll(dentist);
   };
 
   // FIND DENTIST BY ID
   async findDentist(id) {
-    return Dentist.findById({where:{id}});
+    return Dentist.findOne({where:{id}});
   };
 
   // CREATE DENTIST

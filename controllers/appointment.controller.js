@@ -3,8 +3,8 @@ const {Appointment} = require('../models');
 class AppointmentController {
 
   // Search All Appointments
-  async indexAll() {
-    return Appointment.findAll();
+  async indexAll(appointment) {
+    return Appointment.findAll(appointment);
   };
 
   async createAppointment(customerId, dentistId, id) {
@@ -12,33 +12,33 @@ class AppointmentController {
   }
 
   // Find All Appointments by AppointmentId
-  async findAppointment(id) {
-    return Appointment.findById({where:{id}});
+  async findAppointment(appointment,id) {
+    return Appointment.findOne(appointment,{where:{id}});
   };
 
   // Find One Appointment by CustomerId
-  async findByCustomerId(customerId) {
-    return Appointment.findById({where:{customerId}});
+  async findCustomer(customerId) {
+    return Appointment.findOne({where:{customerId}});
   };
 
   // Find One Appointment by DentistId
-  async findByDentistId(dentistId) {
-    return Appointment.findById({where:{dentistId}});
+  async findDentist(dentistId) {
+    return Appointment.findOne({where:{dentistId}});
   };
 
-  // Update One Appointment by CustomerId
-  async updateCustomerId(customerId) {     
-    return Appointment.update({where:{customerId}});
-  };
+  // // Update One Appointment by CustomerId
+  // async updateCustomerId(customerId) {     
+  //   return Appointment.update({where:{customerId}});
+  // };
 
-  // Update One Appointment by DentistId
-  async updateDentistId(dentistId) {     
-    return Appointment.update({where:{dentistId}});
-  };
+  // // Update One Appointment by DentistId
+  // async updateDentistId(dentistId) {     
+  //   return Appointment.update({where:{dentistId}});
+  // };
 
   // Update One Appointment by Id
-  async updateAppointment(customerId,dentistId,id) {
-    return Appointment.update(customerId,dentistId,{where:{id}})
+  async updateAppointment(appointment,id) {
+    return Appointment.update(appointment,{where:{id}})
   }
 
   // Delete One Appointment by AppointmentId

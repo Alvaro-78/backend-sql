@@ -8,15 +8,15 @@ const appointmentController = require("../controllers/appointment.controller");
 
 // GET ALL
 
-router.get ('/', async (req,res) => {
+router.get ('/:id/', async (req,res) => {
   try{
-    if(req.params.customerId) {
-      res.json(await appointmentController.findByCustomerId(req.params.customerId))
-    }else if(req.params.dentistId){
-      res.json(await appointmentController.findByDentistId(req.params.dentistId))
-    }else{
+    // if(req.params.customerId) {
+    //   res.json(await appointmentController.findCustomer(req.params.customerId))
+    // }else if(req.params.dentistId){
+    //   res.json(await appointmentController.findDentist(req.params.dentistId))
+    // }else{
+      // };
       res.json(await appointmentController.indexAll());
-    };
   }catch(error){
     console.log(error);
     res.status(500).json({
@@ -64,13 +64,13 @@ router.get('/:id', async (req,res) => {
 router.put ('/:id', async (req,res) => {
   try{
     const body = req.body;
-    if(req.params.customerId) {
-      res.json(await appointmentController.updateCustomerId(req.params.customerId,body))
-    }else if(req.params.dentistId){
-      res.json(await appointmentController.updateDentistId(req.params.dentistId,body))
-    }else{
-      res.json(await appointmentController.updateAppointment(body));
-    };
+    // if(req.params.customerId) {
+    //   res.json(await appointmentController.updateCustomerId(req.params.customerId,body))
+    // }else if(req.params.dentistId){
+    //   res.json(await appointmentController.updateDentistId(req.params.dentistId,body))
+    // }else{
+      // };
+      res.json(await appointmentController.updateAppointment(body,req.params.id));
   }catch(error){
     console.log(error);
     res.status(500).json({
