@@ -6,6 +6,7 @@ module.exports = {
     {
       firstName: "Marianico",
       lastName:  "ElCorto",
+      password: "1234",
       email: "marianico@elcorto.com",
       phoneNumber: "+34 58741258963",
       address: "C/ sin nombre 33",
@@ -15,6 +16,7 @@ module.exports = {
     {
       firstName: "Chico",
       lastName:  "Terremoto",
+      password: "1234",
       email: "chicho@terremoto.com",
       phoneNumber: "+34 521789543",
       address: "C/para pelotas las mias",
