@@ -1,4 +1,6 @@
-# PROJECT BAKCEND-SQL
+![DOCTOR](./icons/doctor.png)  ![DIENTE](./icons/diente.png)
+ 
+ # PROJECT BAKCEND-SQL 
 
  An appointment management system for a dental clinic.
 
@@ -11,11 +13,12 @@
 
     2. Download node_modules folder.
 
-        - npm i #
+        - npm install
 
-    3. Run Docker.
+    3. Run Docker and PHP my ADMIN
 
         - docker-compose up
+        - Go to https://localhost:8080
     
     4. Run localhost with Nodemon.
 
@@ -89,7 +92,7 @@
 ## TEAM PROJECT
 
     
-    We have worked using the methodology #
+    We have worked using the methodology pair-programing
 
     on two different branches called master and dev.
 
@@ -103,24 +106,37 @@
 [Commits](#https://github.com/Alvaro-78/backend-sql/tree/master)
 
 
-## Technologies
-    - MySQL2
-    - Express
-    - Sequelize
-    - Nodemon
-    - Postman
-    - Docker-Compose
-    - Javascript
-    - Git
-    - Access to Trello Dashboard Documentation
-[Trello](#https://trello.com/b/neMBMHy8/project-sql)
+## TECHNOLOGIES
+
+    We have used the following technologies:
+
+        - MySQL2
+        - Express
+        - Sequelize
+        - Nodemon
+        - Postman
+        - Docker
+        - Javascript
+        - Git
+        - Trello
+
+## AUTORS
+
+Alvaro: 
+
+https://github.com/Alvaro-78
+
+Robert:
+
+https://github.com/Roo-Git
+
 
 ![JavaScript](./assets/icons/js.png)
 ![CSS3](./assets/icons/css3.png)
 ![HTML5](./assets/icons/html5.png)
 
-## Autors:
-    - Alvaro
-    - Robert
+<img width=200px height=200px src="#">
+
+
  
  
