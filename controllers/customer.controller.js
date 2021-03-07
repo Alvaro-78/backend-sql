@@ -22,11 +22,15 @@ class CustomerController {
     return Customer.create(customer)
   };
 
+ async logOut(id) {
+        return Client.findByPk(id);
+    };
+
   // CREATE LOGIN
 
-  async login(firstName,password) {
+  async login(email,password) {
 
-    const customer =  await Customer.findOne({where:{firstName}});
+    const customer =  await Customer.findOne({where:{email}});
     
     if(!customer){
       console.log('Aqui')
@@ -44,6 +48,12 @@ class CustomerController {
     };
     return jwt.sign(payload, secretWord);
   };   
+
+  // LOGOUT 
+
+  async logOut(id) {
+    return Customer.findByPk(id);
+};
 
   // Update Customer
   async updateCustomer(customer, id) {

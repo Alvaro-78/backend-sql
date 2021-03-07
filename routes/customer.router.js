@@ -54,17 +54,34 @@ router.post('/', async (req,res) => {
   };
 });
 
+// CREATE LOGIN
+
 router.post('/login',async ( req,res ) => {
 
   try {
-    const {firstName,password} = req.body;
-    const jwt = await customerController.login(firstName,password);
+    const {email,password} = req.body;
+    const jwt = await customerController.login(email,password);
     console.log(jwt)
     res.json({jwt})
   } catch (error) {
     return res.status(401).json({
       message: error.message
     });
+  };
+});
+
+  // CREATE LOGOUT
+
+router.get('/logout/:id', async(req,res) => {
+  try {
+      const id = req.params.id;
+      const user =  await customerController.logOut(id);
+      const status = `Eat a lot of sugar we want see you as soon as possible, ${user.firstName}`;
+      
+      res.json({ status, id, date:new Date }); 
+      
+  }catch (error) {
+      console.log(error)
   };
 });
 
