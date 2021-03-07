@@ -4,6 +4,16 @@
 
  An appointment management system for a dental clinic.
 
+
+<img width=100px height=100px src="./icons/nodeExpress.jpg">
+<img width=100px height=100px src="./icons/sequelize.png">
+<img width=100px height=100px src="./icons/nodemon.png">
+<img width=100px height=100px src="./icons/slack.png">
+<img width=200px height=100px src="./icons/trello-logo-blue.png">
+<img width=100px height=100px src="./icons/sql.jpg">
+<img width=100px height=100px src="./icons/git.png">
+
+
 ## START
     1. Clone our repo.
     
@@ -62,7 +72,7 @@
     get, and delete this data if you want.
 
 
-    Finally, you can make a dental appointment and generate a user login.
+    Finally, you can make a dental appointment, generate a user login and a logout.
 
     
     NOTE: If you want to play with our database, 
@@ -131,9 +141,7 @@ Robert:
 https://github.com/Roo-Git
 
 
-![JavaScript](./assets/icons/js.png)
-![CSS3](./assets/icons/css3.png)
-![HTML5](./assets/icons/html5.png)
+
 
 <img width=200px height=200px src="#">
 
