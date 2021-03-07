@@ -55,7 +55,7 @@
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/bdf435d2c471432813f8)
 
     2. You can see our Postman Documentation on the next link.
-[Postman Documentation](#https://documenter.getpostman.com/view/14551927/Tz5jg1Wj)
+[Postman Documentation](https://documenter.getpostman.com/view/14551927/Tz5jg1Wj)
 
 
 ## ABOUT THE PROJECT
@@ -111,9 +111,9 @@
     
     and you can see our commits in the following links:
 
-[Trello](#https://trello.com/b/neMBMHy8/project-sql)
+[Trello](https://trello.com/b/neMBMHy8/project-sql)
 
-[Commits](#https://github.com/Alvaro-78/backend-sql/tree/master)
+[Commits](https://github.com/Alvaro-78/backend-sql/tree/master)
 
 
 ## TECHNOLOGIES
@@ -134,12 +134,12 @@
 
 Alvaro: 
 
-https://github.com/Alvaro-78
+[Repository](https://github.com/Alvaro-78)
 
 email: alvaro78an@gmail.com
 
 Robert:
 
-https://github.com/Roo-Git
+[Repository](https://github.com/Roo-Git)
 
 email: robert.martinez.delafuente@gmail.com 
