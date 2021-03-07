@@ -136,14 +136,17 @@ Alvaro:
 
 https://github.com/Alvaro-78
 
+email: alvaro78an@gmail.com
+
 Robert:
 
 https://github.com/Roo-Git
 
+email: robert.martinez.delafuente@gmail.com
 
 
 
-<img width=200px height=200px src="#">
+
 
 
  
