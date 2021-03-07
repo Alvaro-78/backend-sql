@@ -1,8 +1,8 @@
 # PROJECT BAKCEND-SQL
 
-## An appointment management system for a dental clinic.
+ An appointment management system for a dental clinic.
 
-# START:
+## START
     1. Clone our repo.
     
         - HTTPS: git clone https://github.com/Alvaro-78/backend-sql.git
@@ -11,7 +11,7 @@
 
     2. Download node_modules folder.
 
-        - npm i 
+        - npm i #
 
     3. Run Docker.
 
@@ -41,10 +41,32 @@
     1. You can Run in Postman our project.
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/bdf435d2c471432813f8)
 
-    2. You can see our publish documentation too.
-https://documenter.getpostman.com/view/14551927/Tz5jg1Wj
+    2. You can see our Postman Documentation on the next link.
+[Postman Documentation](#https://documenter.getpostman.com/view/14551927/Tz5jg1Wj)
 
-## SEQUELIZE COMANDS
+
+## ABOUT THE PROJECT
+
+    Hi! We are Alvaro and Robert,
+
+    and we have generated a fictitious business model about a small dental clinic.
+
+
+    We have created a database where we can store the data of a customer, 
+    
+    a dentist and an appointment. Also, you can create, update, 
+    
+    get, and delete this data if you want.
+
+
+    Finally, you can make a dental appointment and generate a user login.
+
+    
+    NOTE: If you want to play with our database, 
+    
+    you will need to know the following sequelize commands:
+
+
     sequelize db:migrate                        Run pending migrations
     sequelize db:migrate:schema:timestamps:add  Update migration table to have timestamps
     sequelize db:migrate:status                 List the status of all migrations
@@ -61,28 +83,24 @@ https://documenter.getpostman.com/view/14551927/Tz5jg1Wj
     sequelize init:migrations                   Initializes migrations
     sequelize init:models                       Initializes models
     sequelize init:seeders                      Initializes seeders
-    sequelize migration:generate                Generates a new migration file                                                                        [alias: migration:create]  sequelize model:generate                    Generates a model and its migration                                                                       [alias: model:create]  sequelize seed:generate                     Generates a new seed file                                                                                  
+    sequelize migration:generate                Generates a new migration
+                                                                       
+
+## TEAM PROJECT
+
+    
+    We have worked using the methodology #
+
+    on two different branches called master and dev.
 
 
+    You can follow our journey in Trello 
+    
+    and you can see our commits in the following links:
 
+[Trello](#https://trello.com/b/neMBMHy8/project-sql)
 
-
-
-
-## Models
-	- Customer
-	- Dentist
-	- Dates
-
-
-## Explicacion de la Falla
-
-
-## I'm a Commit!!!
-
-Link Repo: https://github.com/Alvaro-78/backend-sql/tree/master
-
-We have worked on two different branches called master and dev.
+[Commits](#https://github.com/Alvaro-78/backend-sql/tree/master)
 
 
 ## Technologies
