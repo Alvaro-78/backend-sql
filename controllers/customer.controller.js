@@ -18,22 +18,23 @@ class CustomerController {
 
   // Create Customer
   async createCustomer(customer) {
-    Customer.password = await bcrypt.hash(customer.password, 5)
+    customer.password = await bcrypt.hash(customer.password, 5)
     return Customer.create(customer)
   };
 
   // CREATE LOGIN
 
-  async login( email,password ) {
+  async login(firstName,password) {
 
-    const user =  await Customer.findOne( { email } );
-
-    if(!user){
-      throw new Error( 'The email does not exist' )
+    const customer =  await Customer.findOne({where:{firstName}});
+    
+    if(!customer){
+      console.log('Aqui')
+      throw new Error('User does not exist')
     };
 
     if(!await bcrypt.compare( password, customer.password )) {
-      throw new Error( 'Wrong password' )
+      throw new Error('Wrong password')
     };
 
     const payload = {

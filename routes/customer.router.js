@@ -46,7 +46,7 @@ router.post('/', async (req,res) => {
   try{
     res.json(await customerController.createCustomer(req.body));
   }catch(error){
-    console.log(error);
+    console.log('estoy aqui',error);
     res.status(500).json({
       error: 'error',
       message: 'error'
@@ -57,9 +57,10 @@ router.post('/', async (req,res) => {
 router.post('/login',async ( req,res ) => {
 
   try {
-    const {firstname,password} = req.body;
-    const jwt = await customerController.login(email,password);
-    res.json( {jwt} )
+    const {firstName,password} = req.body;
+    const jwt = await customerController.login(firstName,password);
+    console.log(jwt)
+    res.json({jwt})
   } catch (error) {
     return res.status(401).json({
       message: error.message
