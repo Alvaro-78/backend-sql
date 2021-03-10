@@ -16,9 +16,9 @@ app.use(router);
 // Conection to localhost 3000
 
 db.then(() => {
-    app.listen(port, () => {
-        console.log(`Server app listening at http://localhost:${port}`);   
-    });
+  app.listen(port, () => {
+      console.log(`Server app listening at http://localhost:${port}`);   
+  });
 }).catch((err)=>console.log(err.message));
 
 
