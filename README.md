@@ -13,6 +13,14 @@
 <img width=100px height=100px src="./icons/sql.jpg">
 <img width=100px height=100px src="./icons/git.png">
 
+ ## INDEX
+
+- [START](#start)
+- [POSTMAN](#postman)
+- [ABOUT THE PROJECT](#about-the-project)
+- [TEAM PROJECT](#team-project)
+- [TECHNOLOGIES](#techonologies)
+- [AUTORS](#autors)
 
 ## START 
     1. Clone our repo.
@@ -134,12 +142,12 @@
 
 Alvaro: 
 
-https://github.com/Alvaro-78
+[Repository](https://github.com/Alvaro-78)
 
 email: alvaro78an@gmail.com
 
 Robert:
 
-https://github.com/Roo-Git
+[Repository](https://github.com/Roo-Git)
 
 email: robert.martinez.delafuente@gmail.com 
