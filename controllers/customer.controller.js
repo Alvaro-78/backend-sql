@@ -18,6 +18,10 @@ class CustomerController {
 
   // Create Customer
   async createCustomer(customer) {
+    let customerExist = customer.create()
+    if(customerExist) {
+      return;
+    };
     customer.password = await bcrypt.hash(customer.password, 5)
     return Customer.create(customer)
   };
@@ -33,7 +37,6 @@ class CustomerController {
     const customer =  await Customer.findOne({where:{email}});
     
     if(!customer){
-      console.log('Aqui')
       throw new Error('User does not exist')
     };
 
