@@ -18,8 +18,11 @@ class CustomerController {
 
   // Create Customer
   async createCustomer(customer) {
-    let customerExist = Customer.find()
+    let customerEmail = customer.email
+    console.log(customerEmail)
+    let customerExist = await Customer.findOne({where:{email:customerEmail}})
     if(customerExist) {
+      console.log('=========================================Entrando')
       return;
     };
     customer.password = await bcrypt.hash(customer.password, 5)

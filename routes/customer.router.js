@@ -46,7 +46,6 @@ router.post('/', async (req,res) => {
   try{
     res.json(await customerController.createCustomer(req.body));
   }catch(error){
-    console.log('estoy aqui',error);
     res.status(500).json({
       error: 'error',
       message: 'error'
