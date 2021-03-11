@@ -14,8 +14,8 @@ class DentistController {
 
   // CREATE DENTIST
   async createDentist(dentist) {
-    let customerExist = customer.create()
-    if(customerExist) {
+    let dentistExist = Dentist.find()
+    if(dentistExist) {
       return;
     };
     return Dentist.create(dentist)

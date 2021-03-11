@@ -18,7 +18,7 @@ class CustomerController {
 
   // Create Customer
   async createCustomer(customer) {
-    let customerExist = customer.create()
+    let customerExist = Customer.find()
     if(customerExist) {
       return;
     };
