@@ -52,7 +52,12 @@ class CustomerController {
       customerId: customer.id,
       tokenCreationDate: new Date,
     };
-    return jwt.sign(payload, secretWord);
+    console.log("========================>", customer.firstName)
+    let token = jwt.sign(payload, secretWord);
+    return {
+      token,
+      customer
+    }
   };   
 
   // LOGOUT 
