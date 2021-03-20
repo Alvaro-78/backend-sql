@@ -8,14 +8,8 @@ const appointmentController = require("../controllers/appointment.controller");
 
 // GET ALL
 
-router.get ('/:id/', async (req,res) => {
+router.get ('/', async (req,res) => {
   try{
-    // if(req.params.customerId) {
-    //   res.json(await appointmentController.findCustomer(req.params.customerId))
-    // }else if(req.params.dentistId){
-    //   res.json(await appointmentController.findDentist(req.params.dentistId))
-    // }else{
-      // };
       res.json(await appointmentController.indexAll());
   }catch(error){
     console.log(error);
@@ -26,16 +20,16 @@ router.get ('/:id/', async (req,res) => {
   };
 });
 
-// GET APPOINTMENT
+
 
 // CREATE APPOINTMENT
 
 router.post ('/', async (req,res) => {
   try{
-    console.log(req.body)
     const client = req.params.customerId;
     const doctor = req.params.dentistId
-    res.json(await appointmentController.createAppointment(req.body, client, doctor));
+    const responsePepe = res.json(await appointmentController.createAppointment(req.body, client, doctor));
+    console.log("PEPEEEEEEEEE222222",responsePepe)
   }catch(error){
     console.log(error);
     res.status(500).json({
@@ -64,12 +58,6 @@ router.get('/:id', async (req,res) => {
 router.put ('/:id', async (req,res) => {
   try{
     const body = req.body;
-    // if(req.params.customerId) {
-    //   res.json(await appointmentController.updateCustomerId(req.params.customerId,body))
-    // }else if(req.params.dentistId){
-    //   res.json(await appointmentController.updateDentistId(req.params.dentistId,body))
-    // }else{
-      // };
       res.json(await appointmentController.updateAppointment(body,req.params.id));
   }catch(error){
     console.log(error);

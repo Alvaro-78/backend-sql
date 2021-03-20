@@ -7,6 +7,7 @@ class AppointmentController {
     return Appointment.findAll(appointment);
   };
 
+  // Create Appointments
   async createAppointment(customerId, dentistId, id) {
     return Appointment.create(customerId,dentistId,{where:{id}});  
   }
