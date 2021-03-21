@@ -5,14 +5,10 @@ module.exports = {
       await queryInterface.bulkInsert('Dentists', [
       {
         name: 'Dr.Rodolfo',
+        password: '1234',
         createdAt: new Date,
         updatedAt: new Date
       },
-      {
-        name: 'Dr.Muelas Cascadas',
-        createdAt: new Date,
-        updatedAt: new Date
-      }
     ], {});
 
   },

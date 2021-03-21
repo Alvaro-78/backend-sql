@@ -10,13 +10,6 @@ module.exports = {
         createdAt: new Date,
         updatedAt: new Date
       },
-      {
-        dentalAppointment: "10/03/2021",
-        customerId: 2,
-        dentistId: 2,
-        createdAt: new Date,
-        updatedAt: new Date
-      }
     ], {});
 
   },
