@@ -51,6 +51,23 @@ router.post('/', async (req,res) => {
     };
 });
 
+//CREATE LOGIN
+
+router.post('/login', async(req,res) => {
+
+  try {
+    const {name, password} = req.body
+    const jwt = await dentistController.login(name, password)
+    const token = jwt.token
+    const dentist = jwt.dentist 
+    res.json({token, dentist})
+  } catch (error) {
+    return res.status(401).json({
+      message: error.message
+    });
+  }
+})
+
 // UPDATE DENTIST
 
 router.put('/:id', async (req,res) => {

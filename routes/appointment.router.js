@@ -21,7 +21,6 @@ router.get ('/', async (req,res) => {
 });
 
 
-
 // CREATE APPOINTMENT
 
 router.post ('/', async (req,res) => {
